@@ -27,7 +27,7 @@ app.get("/", function(req, res) {
   });
 });
 
-app.post("/", function(req, res) {
+app.post(process.env.PORT || 3000, function(req, res) {
 
   const item = req.body.newItem;
   if (req.body.list === "Work") {
